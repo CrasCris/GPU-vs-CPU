@@ -15,7 +15,7 @@ def mandelbrot(x,y,max_iters):
         z=z * z +c
         if(z.real * z.real + z.imag * z.imag)>=4:
             return i
-        return 255
+    return 255
 
 @cuda.jit
 def create_fractal(min_x,max_x,min_y,max_y,image,iters):
